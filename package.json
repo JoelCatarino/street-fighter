@@ -1,0 +1,24 @@
+{
+  "name": "street-fighter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoelCatarino/street-fighter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoelCatarino/street-fighter/issues"
+  },
+  "homepage": "https://github.com/JoelCatarino/street-fighter#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.0",
+    "jquery": "^3.6.0",
+    "vue": "^2.6.14"
+  }
+}
