@@ -8,39 +8,83 @@
     <title>Street Fighter - Ryo vs Ken</title>
 
     <link rel="shortcut icon" href="../src/assets/flavicon.ico" type="image/x-icon">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../css/style.css">
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 <body>
-    <div class="container pt-5">
-        <div class="row mt-2 d-flex">
-            <div class="col  d-flex justify-content-center">
-                <div class="personagens ms-5 d-flex">
+    <div class="container mt-3">
+
+        <div class="d-flex justify-content-center mt-4">
+            <img class="street" src="../src/img/3rd.png" alt="">
+        </div>
+
+        <div class="row mt-3 d-flex">
+            <div class="col d-flex justify-content-center">
+
+                <div class="personagens d-flex">
                     <img src="../src/img/ryu.png" alt="Ryu From Japan">
+                    <div class="m-5"></div>
+                    <div class="m-5"></div>
+                    <div class="m-5"></div>
                     <img src="../src/img/ken.png" alt="Ken Masters">
                 </div>
             </div>
 
-            <div id="app d-flex">
-                <div class="painel scores">
-                    
+            <div id="app">
+
+                <div class="panel scores d-flex mt-4">
+
+                    <div class="score d-flex justify-content-center align-items-center">
+                        <h1>Ryu</h1>
+                        <div class="life-bar">
+                            <div class="life rounded d-flex justify-content-center bg-green" :class="{danger: ryu < 30}"
+                                :style="{width: ryu + '%'}">
+                                <div>{{ ryu }}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="score d-flex justify-content-center align-items-center">
+                        <h1>Ken</h1>
+                        <div class="life-bar">
+                            <div class="life rounded d-flex justify-content-center bg-green" :class="{danger: ken < 30}"
+                                :style="{width: ken + '%'}">
+                                <div>{{ ken }}</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="painel result"></div>
-                <div class="painel buttons"></div>
-                <div class="painel logs"></div>
+
+                <div class="panel result d-flex justify-content-center mt-4" v-if="hasResult">
+                    <div class="win" v-if="ken == 0">Ryu Won</div>
+                    <div class="lose" v-else>Ken Masters Won</div>
+                </div>
+
+                <div class="panel buttons d-flex justify-content-center mt-4">
+                    <template v-if="running">
+                        <button class="btn attack">Attack</button>
+                        <button class="btn especial">Especial</button>
+                        <button class="btn heal">Heal</button>
+                        <button class="btn run">Run</button>
+                    </template>
+                    <button v-else class="btn again">Again</button>
+                </div>
+                <div class="panel logs d-flex justify-content-center mt-4"></div>
             </div>
         </div>
     </div>
 
-    <script></script>
+    <script src="../vue/vue.js"></script>
 </body>
 
 </html>

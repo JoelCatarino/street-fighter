@@ -1,19 +1,97 @@
 body {
-    background-color: rgb(82, 82, 82);
+    background-color: blanchedalmond;
+    font-family: 'Permanent Marker', cursive;
+}
+
+h1 {
+    color: darkred;
 }
 
 img {
     width: 300px;
     height: 300px;
-    
 }
 
-.app {
+
+.street {
+    width: auto;
+}
+
+#app {
+    display: flex;
     flex-direction: column;
 }
 
-.painel {
+/* 
+.panel {
     margin: 10px;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+} */
+
+
+/* Score Area */
+
+.score {
+    flex-direction: column;
+    flex: 1;
+}
+
+.life-bar {
+    width: 80%;
+    height: 20px;
+}
+
+.life-bar .life {
+    height: 100%;
+    /* width: 100%; */
+    background-color: green;
+}
+
+.life-bar .life.danger {
+    background-color: #e63946;
+}
+
+
+
+/* RESULT AREA */
+
+
+
+.result .win{
+    font-size: 4em;
+    color: #023047;
+}
+
+
+.result .lose{
+    font-size: 4em;
+    color: #023047;
+}
+
+.btn {
+    padding: 5px 10px;
+    margin: 0px 10px;
+    border: 1px solid black;
+    text-transform: uppercase;
+}
+
+.attack {
+    background-color: firebrick;
+}
+
+.especial {
+    background-color: chocolate;
+}
+
+.heal {
+    background-color: darkgreen;
+}
+
+.run {
+    background-color: saddlebrown;
+}
+
+.again {
+    background-color: slateblue;
 }
