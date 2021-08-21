@@ -72,12 +72,12 @@
 
                 <div class="panel buttons d-flex justify-content-center mt-4">
                     <template v-if="running">
-                        <button class="btn attack">Attack</button>
-                        <button class="btn especial">Especial</button>
+                        <button @click="attack(false)" class="btn attack">Attack</button>
+                        <button @click="attack(true)" class="btn especial">Especial</button>
                         <button class="btn heal">Heal</button>
-                        <button class="btn run">Run</button>
+                        <button @click="running = false" class="btn run">Run</button>
                     </template>
-                    <button v-else class="btn again">Again</button>
+                    <button v-else @click="startGame" class="btn again">Again</button>
                 </div>
                 <div class="panel logs d-flex justify-content-center mt-4"></div>
             </div>
