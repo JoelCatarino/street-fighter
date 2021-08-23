@@ -58,13 +58,13 @@ img {
 
 
 
-.result .win{
+.result .win {
     font-size: 4em;
     color: #023047;
 }
 
 
-.result .lose{
+.result .lose {
     font-size: 4em;
     color: #023047;
 }
@@ -94,4 +94,38 @@ img {
 
 .again {
     background-color: slateblue;
+}
+
+
+
+
+/*  LOGS  */
+
+
+
+
+
+.logs ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 20px;
+    margin: 0px;
+}
+
+.logs ul li {
+    display: flex;
+    justify-content: center;
+    margin: 4px 0px;
+    margin-top: 5;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.player {
+    background-color: rgb(211, 209, 209);
+}
+
+.masters {
+    background-color: rgb(228, 81, 37);
 }
